@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Product Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dummy Product Store</h1>
+        <div class="products">
+            <div class="product">
+                <h2>Product 1</h2>
+                <img src="th.jpeg" alt="Product 1" />
+                <p>Price: ₹500</p>
+                <button class="add-to-cart" data-product="Product 1" data-price="500">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Product 2</h2>
+                <img src="th (1).jpeg" alt="Product 2" />
+                <p>Price: ₹1000</p>
+                <button class="add-to-cart" data-product="Product 2" data-price="1000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Product 3</h2>
+                <img src="th (2).jpeg" alt="Product 3" />
+                <p>Price: ₹1500</p>
+                <button class="add-to-cart" data-product="Product 3" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Product 4</h2>
+                <img src="th (3).jpeg" alt="Product 4" />
+                <p>Price: ₹2000</p>
+                <button class="add-to-cart" data-product="Product 4" data-price="2000">Add to Cart</button>
+            </div>
+        </div>
+        <button id="my-cart">My Cart (<span id="cart-count">0</span>)</button>
+    </div>
+
+    <!-- Modal for user details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Enter your details</h2>
+            <form id="userForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip" required>
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for cart details -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-cart-button">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-details">
+                <!-- Cart details will be inserted here -->
+            </div>
+            <button id="checkout">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
